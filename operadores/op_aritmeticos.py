@@ -4,8 +4,8 @@ numero_1 = 5
 numero_2 = 7
 numero_3 = 20
 
-nombre = "Cesar"
-apellido = "Aedo"
+nombre = "Lux"
+apellido = "Dominion"
 
 #operador suma
 suma = numero_1 + numero_2

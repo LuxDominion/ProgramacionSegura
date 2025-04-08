@@ -3,8 +3,8 @@ nueva_variable = True
 print(nueva_variable)
 print(type(nueva_variable))
 
-nombre = "Cesar"
-apellido = "aedo"
+nombre = "Lux"
+apellido = "Dominion"
 edad = 19
 print(nombre + "" + apellido)
 print(nombre, apellido)

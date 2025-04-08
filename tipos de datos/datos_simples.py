@@ -1,6 +1,6 @@
 #Datos de Tipo STRING o cadenas de texto
 
-nombre = 'Cesar Aedo'
+nombre = 'Lux Dominion'
 asignatura = "Intruduccion a la Programacion Segura"
 
 variable1 = '''Intruduccion a la programacion'''
