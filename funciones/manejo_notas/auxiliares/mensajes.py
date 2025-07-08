@@ -1,0 +1,5 @@
+salir = 'Saliendo del sistema'
+nombre_aplicacion = 'SISTEMA DE GESTIÓN ASIGNATURAS'
+volver = 'Volviendo al menú anterior'
+invalido = 'Opción Inválida'
+sin_datos = 'No se han podido cargar datos'
