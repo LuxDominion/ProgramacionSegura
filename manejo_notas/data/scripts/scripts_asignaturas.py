@@ -1,5 +1,5 @@
 listado_asignaturas = '''
-    SELECT id_asignatura,codigo_asig,nombre_asig
+    SELECT id,codigo_asignatura,nombre_asignatura
     FROM asignaturas
     WHERE habilitado = 1
 '''

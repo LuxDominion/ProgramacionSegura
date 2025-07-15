@@ -1,4 +1,4 @@
-from data.conexion import ejecutar_consulta
+from data.conexion import leer_datos
 from data.scripts.scripts_menu import script_menu_asignaturas,script_menu_principal
 from prettytable import PrettyTable
 from auxiliares.mensajes import salir,nombre_aplicacion,volver,invalido
@@ -7,7 +7,7 @@ from negocio.negocio_asignaturas import mostrar_listado_asignaturas
 
 def menu_asignaturas():
     while True:
-        opciones_asignaturas = ejecutar_consulta(script_menu_asignaturas)
+        opciones_asignaturas = leer_datos(script_menu_asignaturas)
         tabla_menu_asignatura = PrettyTable()
         tabla_menu_asignatura.field_names = ['N°','Opción']
         for opcion_asignatura in opciones_asignaturas:
@@ -33,7 +33,7 @@ def menu_principal():
     print()
     print(f'{nombre_aplicacion} v.{version_actual}')
     while True:
-        opciones_menu = ejecutar_consulta(script_menu_principal)
+        opciones_menu = leer_datos(script_menu_principal)
         tabla_menu = PrettyTable()
         tabla_menu.field_names = ['N°','Opción']
         for asignatura in opciones_menu:

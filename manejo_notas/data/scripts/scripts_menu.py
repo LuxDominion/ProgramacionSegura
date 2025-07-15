@@ -3,7 +3,7 @@ script_menu_principal = '''
     FROM opciones_menu
     WHERE tipo_menu = 1
     AND habilitado = 1
-    ORDER BY id_opcion_menu
+    ORDER BY id
 '''
 
 script_menu_asignaturas = '''
@@ -11,5 +11,5 @@ script_menu_asignaturas = '''
     FROM opciones_menu
     WHERE tipo_menu = 2
     AND habilitado = 1
-    ORDER BY id_opcion_menu
+    ORDER BY id
 '''
