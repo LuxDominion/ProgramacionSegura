@@ -1,3 +1,5 @@
+CREATE DATABASE gestion_notas;
+
 USE gestion_notas;
 
 CREATE TABLE IF NOT EXISTS docentes(
