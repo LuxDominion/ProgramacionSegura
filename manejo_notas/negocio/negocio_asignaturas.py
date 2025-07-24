@@ -60,13 +60,48 @@ def agregar_asignatura():
 
     mostrar_listado_asignaturas()
 
-# # UPDATE  
-# def actualizar_asignatura():
-#     mostrar_listado_asignaturas()
-#     busqueda = input('Ingrese asignatura a buscar: ')
-#     indice = indice_asignatura(busqueda)
-#     # nuevo_dato = input(f'Ingrese nuevo nombre para asignatura {asignaturas[indice]}: ')
-#     # asignaturas[indice] = nuevo_dato
 
-#     crear_data('asignaturas.py','asignaturas',asignaturas)
-#     mostrar_listado_asignaturas()
+# UPDATE
+def editar_asignatura():
+    mostrar_listado_asignaturas()
+    try:
+        id_asignatura = int(input('Ingrese el ID de la asignatura a editar: '))
+    except ValueError:
+        print('ID inválido.')
+        return
+    nuevo_codigo = input('Ingrese el nuevo código de la asignatura: ').upper()
+    nuevo_nombre = input('Ingrese el nuevo nombre de la asignatura: ').title()
+    nueva_descripcion = input('Ingrese la nueva descripción de la asignatura: ')
+    consulta = '''
+        UPDATE asignaturas SET codigo_asignatura=%s, nombre_asignatura=%s, descripcion_asignatura=%s WHERE id=%s
+    '''
+    valores = (
+        nuevo_codigo, 
+        nuevo_nombre, 
+        nueva_descripcion, 
+        id_asignatura)
+    
+    if nuevo_codigo and nuevo_nombre:
+        insertar_datos(consulta, valores)
+        print('Asignatura actualizada correctamente.')
+
+    else:
+        print('Datos insuficientes para actualizar.')
+
+    mostrar_listado_asignaturas()
+
+# DELETE
+def eliminar_asignatura():
+    mostrar_listado_asignaturas()
+    try:
+        id_asignatura = int(input('Ingrese el ID de la asignatura a eliminar: '))
+    except ValueError:
+        print('ID inválido.')
+        return
+    consulta = '''
+        DELETE FROM asignaturas WHERE id=%s
+    '''
+    valores = (id_asignatura,)
+    insertar_datos(consulta, valores)
+    print('Asignatura eliminada correctamente.')
+    mostrar_listado_asignaturas()
